@@ -4,6 +4,7 @@
   font-family: roboto;
   font-weight: bold;
   font-size: 1rem;
+  list-style: none;
 }
 
 h1{
@@ -90,17 +91,56 @@ h2{
   display: block !important;
 }
 
+
+
+.name{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.name input{
+  margin-bottom: 20px;
+}
+
 .floatingActive{
   display: none !important;
+  width: 90%;
+
 }
 
 .floatingActive.active{
   display: block !important;
+  transition: 300ms ease-in-out all;
 }
 
 .floatingActive form{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: baseline;
+  gap: 1em;
 }
+
+.floatingActive form input{
+  width: 100%;
+  border: 0;
+  border-bottom: 1px #000 solid;
+  background-color: transparent;
+}
+input[type=button]{
+  border: 0px !important;
+  background-color: #F4E3B2 !important;
+  border-radius: 10px !important;
+  padding: 10px;
+  margin-top: 20px;
+}
+input[type=button]:focus{
+  border: 0px !important;
+}
+input:focus {
+  box-shadow: 0 0 0 0;
+  border: 0 none;
+  border-bottom: 1px red solid !important;
+  outline: 0;
+} 
