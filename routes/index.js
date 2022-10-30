@@ -1,13 +1,13 @@
 const { Router } = require('express')
 
-const UserController = require('../controllers/UserController')
+const CardController = require('../controllers/CardController')
 
 const routes = Router()
 
 routes.get('/', (req, res) =>{
-    res.sendFile('index.ejs')
+    res.sendFile('index.html')
 })
 
-routes.post('/users', UserController.createUser)
+routes.post('/cards', CardController.createCard)
 
 module.exports = routes
