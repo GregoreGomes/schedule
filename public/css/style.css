@@ -131,7 +131,7 @@ h2{
   background-color: transparent;
   color: #000;
 }
-input[type=button]{
+input[type=submit]{
   border: 0px !important;
   background-color: #F4E3B2 !important;
   border-radius: 10px !important;
@@ -139,7 +139,7 @@ input[type=button]{
   margin-top: 20px;
   color: #000;
 }
-input[type=button]:focus{
+input[type=submit]:focus{
   border: 0px !important;
   color: #000;
 }

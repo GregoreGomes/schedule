@@ -28,16 +28,20 @@
         <i class="fa-solid fa-minus"></i>
         <div class="floatingActive">
             <div>
-                <form action="" method="post">
+                <form action="/cards" method="post">
                     <label for="atendimento">Atendimento:</label>
-                    <input type="text" id="atendimento">
+                    <input type="text" name="atendimento" id="atendimento" required>
+
                     <label for="cliente">Cliente:</label>
-                    <input type="text" id="cliente">
+                    <input type="text" name="cliente" id="cliente" required>
+
                     <label for="entrada">Entrada:</label>
-                    <input type="text" name="" id="entrada">
+                    <input type="text" name="entrada" id="entrada" required>
+
                     <label for="saida">Saida:</label>
-                    <input type="text" name="" id="">
-                    <input type="button" value="ADD" class="buttonAdd">
+                    <input type="text" name="saida" id="entrada" required>
+                    
+                    <input type="submit" value="ADD" class="buttonAdd">
                 </form>
             </div>
         </div>
