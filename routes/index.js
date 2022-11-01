@@ -25,6 +25,6 @@ routes.post('/cards', (req, res) =>{
         }
     })
 })
-routes.get('/cards', CardController.getCards)
+
 
 module.exports = routes

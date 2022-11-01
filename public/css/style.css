@@ -39,6 +39,7 @@ h2{
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  text-align: center;
   padding: 4% 2%;
   margin: 3%;
   background-color: #D3D5D7;
