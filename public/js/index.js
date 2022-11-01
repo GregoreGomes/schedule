@@ -28,7 +28,7 @@ buttonAdd.addEventListener("click", close)
 var element = document.querySelector('.card')
 
 const cardsAdd = () =>{
-    fetch("http://localhost:3000/cards")
+    fetch("https://schedule-4qhn.vercel.app/cards")
         .then(res => res.json())
         .then(content => {
             callCard(content)
