@@ -29,16 +29,16 @@ var element = document.querySelector('.card')
 
 const cardsAdd = () =>{
     fetch("http://localhost:3000/cards")
-    .then(res => res.json())
-    .then(content => {
-        callCard(content)
-    })
+        .then(res => res.json())
+        .then(content => {
+            callCard(content)
+        })
 }
 
 const callCard = (content) => {
     content.forEach(e => {
         element.innerHTML = `Atendimento: ${e.username}<br>Cliente:${e.client} `
-        console.log(e)
+
     });  
 }
 
