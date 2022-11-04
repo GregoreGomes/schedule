@@ -1,4 +1,5 @@
 const { Router } = require('express')
+var moment = require('moment');
 
 const CardController = require('../controllers/CardController')
 const Card = require('../models/Card')
@@ -9,8 +10,12 @@ routes.get('/', (req, res) =>{
     res.sendFile('index.html')
 })
 
+
+
 routes.post('/cards', (req, res) =>{
+
     var card = new Card({
+        date: req.body.dia,
         username: req.body.atendimento,
         client: req.body.cliente,
         horaEntrada: req.body.entrada,
@@ -27,5 +32,6 @@ routes.post('/cards', (req, res) =>{
 })
 
 routes.get('/cards', CardController.getCards)
+// routes.delete('/cards', CardController.removeCards)
 
 module.exports = routes

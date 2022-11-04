@@ -2,16 +2,6 @@ const Card = require('../../models/Card')
 
 const CardController = {
 
-    async createCard(req, res){
-        const bodyData = req.body
-        try {
-            const newCard = await Card.create(bodyData)
-            return res.status(200).json(newCard)
-
-        } catch(err){
-            return res.status(400).json(err)
-        }
-    },
     async getCards(req, res){
 
         const paramsData = req.params
@@ -25,5 +15,18 @@ const CardController = {
         }
     }
 }
+//,
+// async removeCards(req, res){
+
+//     const paramsData = req.params
+
+//     try{
+//         const Cards = await Card.find()
+//         return res.status(200).json(Cards)
+//     }
+//     catch(err){
+//         return res.status(400).json(err)
+//     }
+// }
 
 module.exports = CardController

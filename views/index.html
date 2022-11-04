@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css" type="text/css">
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/0cb6534610.js" crossorigin="anonymous"></script>
     <title>Agenda</title>
 </head>
@@ -17,27 +16,57 @@
         </div>
     </header>
     <section class="content">
-        <div class="card">
-            <h2>Segunda</h2>
-            <p>project</p>
+        <div class="card segunda">
+            <h2>Segunda</h2><br>
+            <div class="card-db">
+            </div>
+        </div>
+        <div class="card terca">
+            <h2>Terça</h2><br>
+            <div class="card-db">
+            </div>
+        </div>
+        <div class="card quarta">
+            <h2>Quarta</h2><br>
+            <div class="card-db">
+            </div>
+        </div>
+        <div class="card quinta">
+            <h2>Quinta</h2><br>
+            <div class="card-db">
+            </div>
+        </div>
+        <div class="card sexta">
+            <h2>Sexta</h2><br>
+            <div class="card-db">
+            </div>
+        </div>
+        <div class="card sabado">
+            <h2>Sabádo</h2><br>
+            <div class="card-db">
+            </div>
         </div>
     </section>
-
+    
     <div class="floating">
         <i class="fa-solid fa-plus active"></i>
         <i class="fa-solid fa-minus"></i>
         <div class="floatingActive">
             <div>
                 <form action="/cards" method="post">
+                    
+                    <input type="date" class="date">
+                    <input style="display: none;" type="number" class="dia" name="dia" id="dia" required>
+                    
                     <label for="atendimento">Atendimento:</label>
                     <input type="text" name="atendimento" id="atendimento" required>
-
+                    
                     <label for="cliente">Cliente:</label>
                     <input type="text" name="cliente" id="cliente" required>
-
+                    
                     <label for="entrada">Entrada:</label>
                     <input type="text" name="entrada" id="entrada" required>
-
+                    
                     <label for="saida">Saida:</label>
                     <input type="text" name="saida" id="entrada" required>
                     
@@ -46,8 +75,23 @@
             </div>
         </div>
     </div>
-
-
+    
+    
     <script src="./js/index.js"></script>
+    <script>
+        var teste = document.querySelector('input[type="date"]')
+        var dia = document.querySelector('.dia')
+        
+        teste.addEventListener('change', function(){
+
+            const date = new Date(teste.value)
+            var diaSemana = date.getDay();
+
+            dia.value = `${diaSemana}`
+            
+        })
+        
+        
+    </script>
 </body>
 </html>
