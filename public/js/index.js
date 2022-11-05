@@ -30,7 +30,7 @@ buttonAdd.addEventListener("click", close)
 var element = document.querySelector('.card-db')
 
 const cardsAdd = () =>{
-    fetch("https://schedule-4qhn.vercel.app/cards")
+    fetch("https://data.mongodb-api.com/app/data-ywrsy/endpoint/data/v1")
     .then(res => res.json())
     .then(content => {
         callCard(content)
